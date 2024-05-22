@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrom Board Design</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .carrom-board {
+            width: 600px;
+            height: 600px;
+            background-color: #fff8dc;
+            border: 10px solid #8b4513;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+        .pocket {
+            width: 40px;
+            height: 40px;
+            background-color: #000;
+            border-radius: 50%;
+            position: absolute;
+        }
+        .pocket.top-left {
+            top: -20px;
+            left: -20px;
+        }
+        .pocket.top-right {
+            top: -20px;
+            right: -20px;
+        }
+        .pocket.bottom-left {
+            bottom: -20px;
+            left: -20px;
+        }
+        .pocket.bottom-right {
+            bottom: -20px;
+            right: -20px;
+        }
+        .center-circle {
+            width: 80px;
+            height: 80px;
+            background-color: #ff4500;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .baseline {
+            position: absolute;
+            border: 1px solid #8b4513;
+        }
+        .baseline.horizontal {
+            width: 80%;
+            left: 10%;
+        }
+        .baseline.vertical {
+            height: 80%;
+            top: 10%;
+        }
+        .baseline.top {
+            top: 10%;
+        }
+        .baseline.bottom {
+            bottom: 10%;
+        }
+        .baseline.left {
+            left: 10%;
+        }
+        .baseline.right {
+            right: 10%;
+        }
+    </style>
+</head>
+<body>
+    <div class="carrom-board">
+        <div class="pocket top-left"></div>
+        <div class="pocket top-right"></div>
+        <div class="pocket bottom-left"></div>
+        <div class="pocket bottom-right"></div>
+        <div class="center-circle"></div>
+        <div class="baseline horizontal top"></div>
+        <div class="baseline horizontal bottom"></div>
+        <div class="baseline vertical left"></div>
+        <div class="baseline vertical right"></div>
+    </div>
+</body>
+</html>
